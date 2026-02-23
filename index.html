@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SalesForge AI — Complete Infographic</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0D1B2A;
+    --navy2:   #1A2E44;
+    --blue:    #1A6EFF;
+    --sky:     #4FC3F7;
+    --teal:    #00BFA5;
+    --green:   #00C853;
+    --amber:   #FF9800;
+    --purple:  #9C27B0;
+    --red:     #F44336;
+    --white:   #FFFFFF;
+    --offwhite:#F0F4FF;
+    --muted:   #8BA0B8;
+    --card:    rgba(255,255,255,0.06);
+    --border:  rgba(255,255,255,0.10);
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── INFOGRAPHIC WRAPPER ── */
+  .infographic {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+    position: relative;
+  }
+
+  /* ── SUBTLE GRID TEXTURE ── */
+  .infographic::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(26,110,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,110,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ══════════════════════════════════
+     HERO HEADER
+  ══════════════════════════════════ */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #0D1B2A 0%, #0a2540 50%, #0d1f3c 100%);
+    padding: 64px 60px 56px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(26,110,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(0,191,165,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(26,110,255,0.15);
+    border: 1px solid rgba(26,110,255,0.35);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sky);
+    margin-bottom: 24px;
+  }
+  .hero-badge::before { content: '⚡'; }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+  }
+  .hero-title span { color: var(--blue); }
+
+  .hero-sub {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+    color: var(--sky);
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  /* phase pills in hero */
+  .hero-phases {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .phase-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: 1px solid;
+  }
+  .phase-pill.p1 { background: rgba(0,200,83,0.12);  border-color: rgba(0,200,83,0.35);  color: #69F0AE; }
+  .phase-pill.p2 { background: rgba(255,152,0,0.12); border-color: rgba(255,152,0,0.35); color: #FFD180; }
+  .phase-pill.p3 { background: rgba(156,39,176,0.12);border-color: rgba(156,39,176,0.35);color: #CE93D8; }
+  .phase-pill .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .phase-pill.p1 .dot { background: #69F0AE; }
+  .phase-pill.p2 .dot { background: #FFD180; }
+  .phase-pill.p3 .dot { background: #CE93D8; }
+
+  /* ── SECTION COMMON ── */
+  section {
+    padding: 48px 60px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+  .section-title em { font-style: normal; color: var(--sky); }
+
+  /* ══════════════════════════════════
+     THE PROBLEM
+  ══════════════════════════════════ */
+  .problem-section { background: linear-gradient(180deg, rgba(244,67,54,0.04) 0%, transparent 100%); }
+
+  .problem-banner {
+    background: rgba(244,67,54,0.10);
+    border: 1px solid rgba(244,67,54,0.25);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FF8A80;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .problem-banner strong { color: #FF5252; font-family: 'Syne', sans-serif; font-size: 18px; }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .pain-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .pain-card.c1::before { background: var(--red); }
+  .pain-card.c2::before { background: var(--amber); }
+  .pain-card.c3::before { background: var(--blue); }
+  .pain-card.c4::before { background: var(--purple); }
+
+  .pain-icon { font-size: 28px; margin-bottom: 12px; }
+  .pain-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+  .pain-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* ══════════════════════════════════
+     THE SOLUTION — 5 PILLARS
+  ══════════════════════════════════ */
+  .solution-section { background: linear-gradient(180deg, rgba(26,110,255,0.04) 0%, transparent 100%); }
+
+  .pillars-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+  }
+
+  .pillar {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    padding: 28px 18px 24px;
+    position: relative;
+    text-align: center;
+  }
+  .pillar:first-child { border-radius: 16px 0 0 16px; }
+  .pillar:last-child  { border-radius: 0 16px 16px 0; }
+
+  .pillar::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    z-index: 2;
+    background: var(--navy);
+    padding: 2px 4px;
+  }
+  .pillar:last-child::after { display: none; }
+
+  .pillar-num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px; font-weight: 800;
+    margin: 0 auto 14px;
+    color: var(--white);
+  }
+  .pillar:nth-child(1) .pillar-num { background: var(--blue); }
+  .pillar:nth-child(2) .pillar-num { background: var(--green); }
+  .pillar:nth-child(3) .pillar-num { background: var(--amber); }
+  .pillar:nth-child(4) .pillar-num { background: var(--purple); }
+  .pillar:nth-child(5) .pillar-num { background: var(--red); }
+
+  .pillar-icon { font-size: 26px; margin-bottom: 10px; }
+  .pillar-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .pillar-desc { font-size: 11px; color: var(--muted); line-height: 1.6; }
+
+  .claude-banner {
+    margin-top: 20px;
+    background: rgba(26,110,255,0.10);
+    border: 1px solid rgba(26,110,255,0.25);
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--sky);
+  }
+  .claude-banner strong { font-family: 'Syne', sans-serif; font-weight: 700; }
+
+  /* ══════════════════════════════════
+     HOW IT WORKS
+  ══════════════════════════════════ */
+  .workflow-section {}
+
+  .steps-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .step-connector {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    right: -50%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), transparent);
+    z-index: 0;
+  }
+  .step:last-child .step-connector { display: none; }
+
+  .step-circle {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px; font-weight: 800;
+    color: var(--white);
+    z-index: 1;
+    margin-bottom: 14px;
+    border: 2px solid transparent;
+  }
+  .step:nth-child(1) .step-circle { background: var(--blue);   border-color: rgba(26,110,255,0.4); }
+  .step:nth-child(2) .step-circle { background: var(--green);  border-color: rgba(0,200,83,0.4); }
+  .step:nth-child(3) .step-circle { background: var(--amber);  border-color: rgba(255,152,0,0.4); }
+  .step:nth-child(4) .step-circle { background: var(--purple); border-color: rgba(156,39,176,0.4); }
+  .step:nth-child(5) .step-circle { background: var(--red);    border-color: rgba(244,67,54,0.4); }
+
+  .step-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 14px;
+    width: 100%;
+  }
+  .step-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
+  .step-desc  { font-size: 11px; color: var(--muted); line-height: 1.6; }
+
+  .step-ai-tag {
+    margin-top: 10px;
+    display: inline-block;
+    background: rgba(26,110,255,0.12);
+    border: 1px solid rgba(26,110,255,0.25);
+    border-radius: 100px;
+    padding: 2px 10px;
+    font-size: 10px;
+    color: var(--sky);
+    font-weight: 600;
+  }
+
+  /* ══════════════════════════════════
+     FEATURES GRID
+  ══════════════════════════════════ */
+  .features-section {}
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .feat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+
+  .feat-icon-wrap {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .feat-icon-wrap.blue   { background: rgba(26,110,255,0.15); }
+  .feat-icon-wrap.green  { background: rgba(0,200,83,0.15);   }
+  .feat-icon-wrap.amber  { background: rgba(255,152,0,0.15);  }
+  .feat-icon-wrap.purple { background: rgba(156,39,176,0.15); }
+  .feat-icon-wrap.red    { background: rgba(244,67,54,0.15);  }
+  .feat-icon-wrap.teal   { background: rgba(0,191,165,0.15);  }
+
+  .feat-content {}
+  .feat-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .feat-body  { font-size: 11.5px; color: var(--muted); line-height: 1.65; }
+
+  /* ══════════════════════════════════
+     ROI / IMPACT
+  ══════════════════════════════════ */
+  .roi-section { background: linear-gradient(180deg, rgba(0,200,83,0.03) 0%, transparent 100%); }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .stat-box.s1::before { background: var(--blue);   }
+  .stat-box.s2::before { background: var(--green);  }
+  .stat-box.s3::before { background: var(--amber);  }
+  .stat-box.s4::before { background: var(--purple); }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-box.s1 .stat-num { color: var(--sky); }
+  .stat-box.s2 .stat-num { color: #69F0AE; }
+  .stat-box.s3 .stat-num { color: #FFD180; }
+  .stat-box.s4 .stat-num { color: #CE93D8; }
+
+  .stat-label { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+
+  .compare-table {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .compare-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-header div {
+    padding: 14px 24px;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .compare-header div:first-child { color: #FF8A80; border-right: 1px solid var(--border); }
+  .compare-header div:last-child  { color: #69F0AE; }
+
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-row:last-child { border-bottom: none; }
+
+  .compare-cell {
+    padding: 13px 24px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .compare-cell:first-child { border-right: 1px solid var(--border); color: #FF8A80; background: rgba(244,67,54,0.03); }
+  .compare-cell:last-child  { color: #69F0AE; background: rgba(0,200,83,0.03); }
+  .compare-row:nth-child(odd) .compare-cell { background: rgba(255,255,255,0.01); }
+
+  /* ══════════════════════════════════
+     ROADMAP
+  ══════════════════════════════════ */
+  .roadmap-section {}
+
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .road-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .road-header {
+    padding: 22px 24px 18px;
+  }
+  .road-header.green  { background: linear-gradient(135deg, rgba(0,200,83,0.25), rgba(0,200,83,0.08)); border-bottom: 1px solid rgba(0,200,83,0.2); }
+  .road-header.amber  { background: linear-gradient(135deg, rgba(255,152,0,0.25), rgba(255,152,0,0.08)); border-bottom: 1px solid rgba(255,152,0,0.2); }
+  .road-header.purple { background: linear-gradient(135deg, rgba(156,39,176,0.25), rgba(156,39,176,0.08)); border-bottom: 1px solid rgba(156,39,176,0.2); }
+
+  .road-phase { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 2px; }
+  .road-header.green  .road-phase { color: #69F0AE; }
+  .road-header.amber  .road-phase { color: #FFD180; }
+  .road-header.purple .road-phase { color: #CE93D8; }
+
+  .road-subtitle { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .road-weeks { font-size: 11px; color: var(--muted); }
+
+  .road-body { background: var(--card); padding: 20px 24px; }
+
+  .road-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 11px;
+    font-size: 12px;
+    color: var(--offwhite);
+    line-height: 1.5;
+  }
+  .road-item:last-child { margin-bottom: 0; }
+  .road-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .green  .road-dot { background: #69F0AE; }
+  .amber  .road-dot { background: #FFD180; }
+  .purple .road-dot { background: #CE93D8; }
+
+  .road-gate {
+    background: rgba(255,255,255,0.04);
+    border-top: 1px solid var(--border);
+    padding: 12px 24px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .road-gate strong { color: var(--white); }
+
+  /* ══════════════════════════════════
+     TECH STACK
+  ══════════════════════════════════ */
+  .tech-section {}
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .tech-col {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .tech-col-header {
+    padding: 14px 16px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white);
+  }
+  .tech-col-header.blue   { background: rgba(26,110,255,0.25);  border-bottom: 1px solid rgba(26,110,255,0.3); }
+  .tech-col-header.green  { background: rgba(0,200,83,0.20);    border-bottom: 1px solid rgba(0,200,83,0.25); }
+  .tech-col-header.amber  { background: rgba(255,152,0,0.20);   border-bottom: 1px solid rgba(255,152,0,0.25); }
+  .tech-col-header.purple { background: rgba(156,39,176,0.20);  border-bottom: 1px solid rgba(156,39,176,0.25); }
+  .tech-col-header.teal   { background: rgba(0,191,165,0.20);   border-bottom: 1px solid rgba(0,191,165,0.25); }
+
+  .tech-item {
+    padding: 10px 14px;
+    font-size: 11px;
+    color: var(--offwhite);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.4;
+  }
+  .tech-item:last-child { border-bottom: none; }
+  .tech-item span { color: var(--muted); font-size: 10px; display: block; }
+
+  /* ══════════════════════════════════
+     PRICING
+  ══════════════════════════════════ */
+  .pricing-section {}
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .price-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  .price-card.featured {
+    background: linear-gradient(160deg, rgba(26,110,255,0.12), rgba(26,110,255,0.05));
+    border-color: rgba(26,110,255,0.4);
+    transform: scale(1.02);
+  }
+
+  .price-card-top { padding: 28px 28px 20px; }
+  .price-tag {
+    display: inline-block;
+    background: rgba(26,110,255,0.15);
+    border: 1px solid rgba(26,110,255,0.3);
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--sky);
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .price-tag.popular {
+    background: rgba(0,191,165,0.15);
+    border-color: rgba(0,191,165,0.35);
+    color: #80CBC4;
+  }
+  .price-tag.enterprise { background: rgba(156,39,176,0.15); border-color: rgba(156,39,176,0.35); color: #CE93D8; }
+
+  .price-name { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+  .price-amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 38px; font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-card:nth-child(1) .price-amount { color: var(--sky);    }
+  .price-card:nth-child(2) .price-amount { color: var(--teal);   }
+  .price-card:nth-child(3) .price-amount { color: #CE93D8;       }
+  .price-per { font-size: 12px; color: var(--muted); margin-bottom: 0; }
+
+  .price-divider { height: 1px; background: var(--border); margin: 0 28px; }
+
+  .price-features { padding: 20px 28px 24px; }
+  .price-feat {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: var(--offwhite);
+    line-height: 1.5;
+  }
+  .price-feat:last-child { margin-bottom: 0; }
+  .check { color: var(--teal); font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ══════════════════════════════════
+     NEXT STEPS
+  ══════════════════════════════════ */
+  .cta-section {
+    background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 100%);
+    position: relative;
+    overflow: hidden;
+    border-bottom: none;
+    padding-bottom: 60px;
+  }
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(26,110,255,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .cta-title em { font-style: normal; color: var(--sky); }
+
+  .cta-sub {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .cta-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-step {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .cta-step-num {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 18px; font-weight: 800;
+    margin: 0 auto 16px;
+    color: var(--white);
+  }
+  .cta-step-icon { font-size: 28px; margin-bottom: 12px; }
+  .cta-step-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .cta-step-desc { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+  .cta-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--blue);
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 18px 44px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-contact {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    position: relative;
+    z-index: 1;
+  }
+  .cta-contact a { color: var(--sky); text-decoration: none; }
+
+  /* DIVIDER BETWEEN SECTIONS */
+  .section-sep {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* ══════════════════════════════════
+     CREATOR BAR
+  ══════════════════════════════════ */
+  .creator-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #060f1a 0%, #0a1e35 50%, #060f1a 100%);
+    border-bottom: 1px solid rgba(26,110,255,0.25);
+    padding: 14px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .creator-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--teal), var(--blue));
+  }
+  .creator-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .creator-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px; font-weight: 800;
+    color: var(--white);
+    flex-shrink: 0;
+    border: 2px solid rgba(26,110,255,0.4);
+  }
+  .creator-info {}
+  .creator-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .creator-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.2px;
+  }
+  .creator-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .creator-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(26,110,255,0.10);
+    border: 1px solid rgba(26,110,255,0.25);
+    border-radius: 100px;
+    padding: 8px 18px;
+    text-decoration: none;
+    color: var(--sky);
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .creator-contact:hover {
+    background: rgba(26,110,255,0.20);
+  }
+  .creator-contact-icon { font-size: 14px; }
+  .creator-divider {
+    width: 1px; height: 28px;
+    background: var(--border);
+  }
+  .creator-doc-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.5;
+  }
+  .creator-doc-label strong {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+
+  /* PRINT / SCREENSHOT HINT */
+  @media print {
+    body { background: #0D1B2A; -webkit-print-color-adjust: exact; }
+    .infographic { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="infographic">
+
+  <!-- ══ CREATOR BAR ══ -->
+  <div class="creator-bar">
+    <div class="creator-left">
+      <div class="creator-avatar">SK</div>
+      <div class="creator-info">
+        <div class="creator-label">Created by</div>
+        <div class="creator-name">Sazzad Khan</div>
+      </div>
+    </div>
+    <div class="creator-right">
+      <div class="creator-doc-label">
+        <strong>Document</strong>
+        SalesForge AI · Complete Infographic
+      </div>
+      <div class="creator-divider"></div>
+      <a class="creator-contact" href="mailto:khan.sazzadenv@gmail.com">
+        <span class="creator-contact-icon">✉</span>
+        khan.sazzadenv@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">B2B Enterprise Sales Intelligence Platform</div>
+      <h1 class="hero-title">Sales<span>Forge</span> AI</h1>
+      <p class="hero-sub">End-to-end AI platform · From first prospect to closed deal</p>
+      <p class="hero-tagline">"Giving every rep the capability of your best rep — on their worst day."</p>
+      <div class="hero-phases">
+        <div class="phase-pill p1"><div class="dot"></div>Phase 1 · MVP Launch · Weeks 1–12</div>
+        <div class="phase-pill p2"><div class="dot"></div>Phase 2 · Intelligence Layer · Weeks 13–20</div>
+        <div class="phase-pill p3"><div class="dot"></div>Phase 3 · Enterprise Scale · Weeks 21–36</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ THE PROBLEM ══ -->
+  <section class="problem-section">
+    <div class="section-label">01 · The Problem</div>
+    <h2 class="section-title">Enterprise sales teams are <em>bleeding time</em></h2>
+    <div class="problem-banner">
+      Sales reps spend only <strong>35%</strong> of their time actually selling.<br>
+      The other <strong>65%</strong> disappears into manual research, generic outreach, stale CRM records, and guesswork forecasting.
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card c1">
+        <div class="pain-icon">🔍</div>
+        <div class="pain-title">No Lead Intelligence</div>
+        <div class="pain-body">Hours lost manually researching prospects before writing a single email. Outreach is generic and misses the mark.</div>
+      </div>
+      <div class="pain-card c2">
+        <div class="pain-icon">🔀</div>
+        <div class="pain-title">Scattered Outreach</div>
+        <div class="pain-body">6 disconnected tools for email, LinkedIn, CRM, and follow-ups. Nothing talks to each other. Context is lost.</div>
+      </div>
+      <div class="pain-card c3">
+        <div class="pain-icon">🗄️</div>
+        <div class="pain-title">CRM Chaos</div>
+        <div class="pain-body">Stale data, skipped updates, deals falling through cracks. Managers have no real-time visibility into the pipeline.</div>
+      </div>
+      <div class="pain-card c4">
+        <div class="pain-icon">📉</div>
+        <div class="pain-title">Blind Forecasting</div>
+        <div class="pain-body">Quarter-end is always a scramble. Finance can't trust the pipeline numbers. Forecasts are off by 30–40%.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ THE SOLUTION ══ -->
+  <section class="solution-section">
+    <div class="section-label">02 · The Solution</div>
+    <h2 class="section-title">One platform. <em>Every stage.</em> Powered by AI.</h2>
+    <div class="pillars-flow">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon">🎯</div>
+        <div class="pillar-name">AI Lead Discovery</div>
+        <div class="pillar-desc">ICP-driven enrichment with 0–100 fit score and pain hypothesis per lead</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon">✉️</div>
+        <div class="pillar-name">AI Outreach Composer</div>
+        <div class="pillar-desc">3-touch email + LinkedIn sequences personalized to each prospect in minutes</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon">📋</div>
+        <div class="pillar-name">Smart CRM</div>
+        <div class="pillar-desc">Pipeline that auto-updates from email activity and meeting data. No manual entry.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-icon">🧠</div>
+        <div class="pillar-name">Meeting Intelligence</div>
+        <div class="pillar-desc">Auto-transcription, AI summaries, action items and live call coaching</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">05</div>
+        <div class="pillar-icon">📈</div>
+        <div class="pillar-name">AI Forecasting</div>
+        <div class="pillar-desc">Win probabilities, deal health scores, and revenue projections finance trusts</div>
+      </div>
+    </div>
+    <div class="claude-banner">
+      <strong>⚡ Powered by Claude AI (Anthropic)</strong> — the intelligence engine behind every AI-generated output in the platform
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══ -->
+  <section class="workflow-section">
+    <div class="section-label">03 · How It Works</div>
+    <h2 class="section-title">From cold lead to closed deal — <em>inside one platform</em></h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-connector"></div>
+        <div class="step-circle">1</div>
+        <div class="step-box">
+          <div class="step-title">Define ICP</div>
+          <div class="step-desc">Set industry, company size, geography & tech stack. Takes 2 minutes.</div>
+          <div class="step-ai-tag">Rep setup</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-connector"></div>
+        <div class="step-circle">2</div>
+        <div class="step-box">
+          <div class="step-title">Enrich & Score</div>
+          <div class="step-desc">AI enriches every lead and generates a "pain hypothesis" — why they need you right now.</div>
+          <div class="step-ai-tag">⚡ Claude AI</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-connector"></div>
+        <div class="step-circle">3</div>
+        <div class="step-box">
+          <div class="step-title">Generate Outreach</div>
+          <div class="step-desc">One click → 3-touch email sequence and LinkedIn DMs, personalized and ready to send.</div>
+          <div class="step-ai-tag">⚡ Claude AI</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-connector"></div>
+        <div class="step-circle">4</div>
+        <div class="step-box">
+          <div class="step-title">Track & Coach</div>
+          <div class="step-desc">CRM auto-updates. Meetings transcribed. Real-time coaching nudges during live calls.</div>
+          <div class="step-ai-tag">⚡ Claude AI</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-circle">5</div>
+        <div class="step-box">
+          <div class="step-title">Forecast & Close</div>
+          <div class="step-desc">AI deal scores update in real time. Managers see risks. Reps know the exact next action.</div>
+          <div class="step-ai-tag">⚡ Claude AI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KEY FEATURES ══ -->
+  <section class="features-section">
+    <div class="section-label">04 · Key Features</div>
+    <h2 class="section-title">Built for <em>enterprise sales teams</em></h2>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon-wrap blue">🎯</div>
+        <div class="feat-content">
+          <div class="feat-title">AI Lead Discovery</div>
+          <div class="feat-body">ICP builder → Explorium enrichment → 0–100 fit score with Claude-generated pain hypothesis per lead.</div>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap green">✉️</div>
+        <div class="feat-content">
+          <div class="feat-title">AI Outreach Composer</div>
+          <div class="feat-body">3-touch email + LinkedIn sequences personalized to each lead. Tone controls. One-click send via Gmail/Outlook.</div>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap amber">🧠</div>
+        <div class="feat-content">
+          <div class="feat-title">Meeting Intelligence</div>
+          <div class="feat-body">Auto-transcription, AI summary, action item extraction, and CRM auto-update after every call.</div>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap purple">📊</div>
+        <div class="feat-content">
+          <div class="feat-title">Deal Scoring & Smart CRM</div>
+          <div class="feat-body">AI win probability, stall detection, risk flags, org chart mapping, and next best action per deal.</div>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap red">📈</div>
+        <div class="feat-content">
+          <div class="feat-title">Revenue Forecasting</div>
+          <div class="feat-body">AI-powered quarterly forecast with confidence intervals and scenario modeling. Finance-grade accuracy.</div>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon-wrap teal">🛡️</div>
+        <div class="feat-content">
+          <div class="feat-title">Enterprise Ready</div>
+          <div class="feat-body">SOC 2 Type II certified. SAML SSO + SCIM. Native Salesforce & HubSpot bi-directional sync.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BUSINESS IMPACT ══ -->
+  <section class="roi-section">
+    <div class="section-label">05 · Business Impact</div>
+    <h2 class="section-title">Measurable ROI — <em>in real numbers</em></h2>
+    <div class="stats-row">
+      <div class="stat-box s1">
+        <div class="stat-num">3×</div>
+        <div class="stat-label">More leads qualified per rep per week</div>
+      </div>
+      <div class="stat-box s2">
+        <div class="stat-num">65%</div>
+        <div class="stat-label">Less time on admin & manual research</div>
+      </div>
+      <div class="stat-box s3">
+        <div class="stat-num">35%+</div>
+        <div class="stat-label">Higher email open rates vs 20% industry avg</div>
+      </div>
+      <div class="stat-box s4">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">Faster time to first meeting booked</div>
+      </div>
+    </div>
+    <div class="compare-table">
+      <div class="compare-header">
+        <div>❌ Without SalesForge AI</div>
+        <div>✅ With SalesForge AI</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">15+ messages to book a single meeting</div>
+        <div class="compare-cell">2 AI-personalized touches, auto-follow-up</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">2 hours/day per rep on manual CRM updates</div>
+        <div class="compare-cell">CRM auto-updates from email + meeting activity</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Forecasts wrong by 30–40%</div>
+        <div class="compare-cell">AI win probability accurate within 15%</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">6-month new rep ramp time</div>
+        <div class="compare-cell">AI coaching cuts ramp to ~3 months</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ROADMAP ══ -->
+  <section class="roadmap-section">
+    <div class="section-label">06 · Phased Roadmap</div>
+    <h2 class="section-title">Value from <em>week one</em> — scale from there</h2>
+    <div class="roadmap-grid">
+      <div class="road-card">
+        <div class="road-header green">
+          <div class="road-phase">Phase 1</div>
+          <div class="road-subtitle">MVP Launch</div>
+          <div class="road-weeks">⏱ Weeks 1–12 · 3–4 engineers</div>
+        </div>
+        <div class="road-body">
+          <div class="road-item"><div class="road-dot"></div>ICP builder & lead enrichment</div>
+          <div class="road-item"><div class="road-dot"></div>AI email & LinkedIn composer</div>
+          <div class="road-item"><div class="road-dot"></div>Pipeline kanban CRM</div>
+          <div class="road-item"><div class="road-dot"></div>Performance dashboard</div>
+          <div class="road-item"><div class="road-dot"></div>Multi-tenant auth & onboarding</div>
+        </div>
+        <div class="road-gate">Gate: <strong>50 beta users · $10K MRR</strong></div>
+      </div>
+      <div class="road-card">
+        <div class="road-header amber">
+          <div class="road-phase">Phase 2</div>
+          <div class="road-subtitle">Intelligence Layer</div>
+          <div class="road-weeks">⏱ Weeks 13–20 · 5–6 engineers</div>
+        </div>
+        <div class="road-body">
+          <div class="road-item"><div class="road-dot"></div>Meeting transcription & AI summaries</div>
+          <div class="road-item"><div class="road-dot"></div>Live call coaching (real-time)</div>
+          <div class="road-item"><div class="road-dot"></div>AI deal scoring & risk flags</div>
+          <div class="road-item"><div class="road-dot"></div>Stakeholder org mapping</div>
+          <div class="road-item"><div class="road-dot"></div>Competitive battlecards</div>
+        </div>
+        <div class="road-gate">Gate: <strong>NPS &gt; 40 · 80% retention</strong></div>
+      </div>
+      <div class="road-card">
+        <div class="road-header purple">
+          <div class="road-phase">Phase 3</div>
+          <div class="road-subtitle">Enterprise Scale</div>
+          <div class="road-weeks">⏱ Weeks 21–36 · 8–10 engineers</div>
+        </div>
+        <div class="road-body">
+          <div class="road-item"><div class="road-dot"></div>Market intelligence feed</div>
+          <div class="road-item"><div class="road-dot"></div>Advanced revenue forecasting</div>
+          <div class="road-item"><div class="road-dot"></div>SSO + SOC 2 Type II compliance</div>
+          <div class="road-item"><div class="road-dot"></div>Salesforce & HubSpot sync</div>
+          <div class="road-item"><div class="road-dot"></div>Public REST API + ecosystem</div>
+        </div>
+        <div class="road-gate">Gate: <strong>$500K ARR · Enterprise deal closed</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TECH STACK ══ -->
+  <section class="tech-section">
+    <div class="section-label">07 · Technology</div>
+    <h2 class="section-title">Enterprise-grade from <em>day one</em></h2>
+    <div class="tech-grid">
+      <div class="tech-col">
+        <div class="tech-col-header blue">⚡ AI & Intelligence</div>
+        <div class="tech-item">Claude API (Anthropic)<span>Core AI engine</span></div>
+        <div class="tech-item">Recall.ai<span>Meeting bots</span></div>
+        <div class="tech-item">AssemblyAI<span>Voice transcription</span></div>
+        <div class="tech-item">pgvector<span>Semantic search</span></div>
+      </div>
+      <div class="tech-col">
+        <div class="tech-col-header green">🖥 Frontend</div>
+        <div class="tech-item">Next.js 14 + React 18<span>App framework</span></div>
+        <div class="tech-item">Tailwind + shadcn/ui<span>Design system</span></div>
+        <div class="tech-item">React Flow<span>Org chart maps</span></div>
+        <div class="tech-item">Recharts + D3<span>Analytics charts</span></div>
+      </div>
+      <div class="tech-col">
+        <div class="tech-col-header amber">🗄 Backend & Data</div>
+        <div class="tech-item">Node.js + Fastify<span>REST API server</span></div>
+        <div class="tech-item">PostgreSQL 15 + RLS<span>Primary database</span></div>
+        <div class="tech-item">Redis + BullMQ<span>Queue & cache</span></div>
+        <div class="tech-item">Explorium API<span>Lead enrichment</span></div>
+      </div>
+      <div class="tech-col">
+        <div class="tech-col-header purple">☁️ Infrastructure</div>
+        <div class="tech-item">AWS ECS Fargate<span>Auto-scaling compute</span></div>
+        <div class="tech-item">SendGrid<span>Email delivery</span></div>
+        <div class="tech-item">Datadog + Sentry<span>Monitoring & APM</span></div>
+        <div class="tech-item">Stripe<span>Subscription billing</span></div>
+      </div>
+      <div class="tech-col">
+        <div class="tech-col-header teal">🛡 Enterprise</div>
+        <div class="tech-item">Clerk + WorkOS<span>Auth + SSO/SCIM</span></div>
+        <div class="tech-item">SAML 2.0<span>Enterprise login</span></div>
+        <div class="tech-item">Vanta<span>SOC 2 automation</span></div>
+        <div class="tech-item">Salesforce/HubSpot<span>CRM sync</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRICING ══ -->
+  <section class="pricing-section">
+    <div class="section-label">08 · Pricing</div>
+    <h2 class="section-title">Transparent pricing — <em>immediate ROI</em></h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-card-top">
+          <div class="price-tag">Starter</div>
+          <div class="price-name">Starter</div>
+          <div class="price-amount">$199</div>
+          <div class="price-per">per user / month</div>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat"><span class="check">✓</span>ICP builder & lead enrichment</div>
+          <div class="price-feat"><span class="check">✓</span>AI email & LinkedIn sequences</div>
+          <div class="price-feat"><span class="check">✓</span>Pipeline CRM (up to 500 deals)</div>
+          <div class="price-feat"><span class="check">✓</span>Performance dashboard</div>
+          <div class="price-feat"><span class="check">✓</span>Up to 5 users · Email support</div>
+        </div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-card-top">
+          <div class="price-tag popular">⭐ Most Popular</div>
+          <div class="price-name">Growth</div>
+          <div class="price-amount">$499</div>
+          <div class="price-per">per user / month</div>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat"><span class="check">✓</span>Everything in Starter</div>
+          <div class="price-feat"><span class="check">✓</span>Meeting intelligence & transcription</div>
+          <div class="price-feat"><span class="check">✓</span>Live call coaching</div>
+          <div class="price-feat"><span class="check">✓</span>AI deal scoring & risk flags</div>
+          <div class="price-feat"><span class="check">✓</span>Unlimited deals · Priority support</div>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-card-top">
+          <div class="price-tag enterprise">Enterprise</div>
+          <div class="price-name">Enterprise</div>
+          <div class="price-amount">Custom</div>
+          <div class="price-per">annual contract</div>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat"><span class="check">✓</span>Everything in Growth</div>
+          <div class="price-feat"><span class="check">✓</span>SSO + SCIM + SOC 2 Type II</div>
+          <div class="price-feat"><span class="check">✓</span>Salesforce/HubSpot sync</div>
+          <div class="price-feat"><span class="check">✓</span>Public API access</div>
+          <div class="price-feat"><span class="check">✓</span>Dedicated CSM · SLA guarantee</div>
+        </div>
+      </div>
+    </div>
+  
+</section>
+
+  <!-- ══ NEXT STEPS / CTA ══ -->
+  <section class="cta-section">
+    <div class="section-label" style="text-align:center; margin-bottom: 12px;">09 · Next Steps</div>
+    <h2 class="cta-title">Ready to <em>transform</em> your sales motion?</h2>
+    <p class="cta-sub">Zero risk. Full feature access. Real results in 30 days.</p>
+    <div class="cta-steps">
+      <div class="cta-step">
+        <div class="cta-step-num">01</div>
+        <div class="cta-step-icon">🤝</div>
+        <div class="cta-step-title">Discovery Call</div>
+        <div class="cta-step-desc">30-minute session to map your current sales workflow, identify bottlenecks, and show exactly how SalesForge fits.</div>
+      </div>
+      <div class="cta-step">
+        <div class="cta-step-num">02</div>
+        <div class="cta-step-icon">🚀</div>
+        <div class="cta-step-title">Free 30-Day Pilot</div>
+        <div class="cta-step-desc">3 reps, full platform access, no commitment. At day 30, you'll have real data — open rates, leads qualified, time saved.</div>
+      </div>
+      <div class="cta-step">
+        <div class="cta-step-num">03</div>
+        <div class="cta-step-icon">🏆</div>
+        <div class="cta-step-title">Full Deployment</div>
+        <div class="cta-step-desc">Org-wide rollout with a dedicated Customer Success Manager guiding onboarding, adoption, and performance.</div>
+      </div>
+    </div>
+    <a class="cta-btn" href="#">Book a Discovery Call →</a>
+        <p class="cta-contact">hello@salesforge.ai &nbsp;&middot;&nbsp; salesforge.ai &nbsp;&middot;&nbsp; Confidential 2024</p>
+
+  </section>
+
+</div>
+</body>
+</html>
